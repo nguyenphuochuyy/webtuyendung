@@ -1,4 +1,5 @@
 .header {
+  width: 100%;
   padding: 1.5rem 0;
   text-align: center;
   margin-bottom: 2rem;
@@ -8,6 +9,12 @@
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .header h1 {
@@ -34,10 +41,14 @@
     padding: 1rem 0;
     margin-bottom: 1.5rem;
   }
+  .header-content {
+    padding: 0 1rem;
+  }
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .header p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }
