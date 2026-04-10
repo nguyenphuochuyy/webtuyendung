@@ -9,6 +9,7 @@ import './App.css';
 function App() {
   const [filter, setFilter] = useState('all'); // 'all', 'active', 'paused'
   const [salaryType, setSalaryType] = useState('all'); // 'all', 'weekly', 'monthly'
+  const [location, setLocation] = useState('all');
   const [sortBy, setSortBy] = useState('latest'); // 'latest', 'salary_desc', 'salary_asc'
 
   // Filter and Sort Jobs
@@ -21,6 +22,10 @@ function App() {
 
     if (salaryType !== 'all') {
       filtered = filtered.filter(job => job.salary_type === salaryType);
+    }
+
+    if (location !== 'all') {
+      filtered = filtered.filter(job => job.location.includes(location));
     }
 
     // Sort by date_posted descending
@@ -36,7 +41,7 @@ function App() {
       }
       return new Date(b.date_posted) - new Date(a.date_posted);
     });
-  }, [filter, salaryType, sortBy]);
+  }, [filter, salaryType, location, sortBy]);
 
   return (
     <div className="app-wrapper">
@@ -48,6 +53,8 @@ function App() {
           onFilterChange={setFilter}
           currentSalaryType={salaryType}
           onSalaryTypeChange={setSalaryType}
+          currentLocation={location}
+          onLocationChange={setLocation}
           currentSort={sortBy}
           onSortChange={setSortBy}
           totalJobs={displayedJobs.length}

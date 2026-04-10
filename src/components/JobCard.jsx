@@ -31,55 +31,56 @@ function JobCard({ job }) {
         </div>
       </div>
 
+      <div className="job-description">
+        <i className="fa-solid fa-circle-info text-primary"></i>
+        <span><strong>Mô tả:</strong> {job.description}</span>
+      </div>
+
       <div className="job-main-info">
         <div className="info-block salary-block">
           <span className="label"><i className="fa-solid fa-money-bill-wave"></i> {job.salary_label}</span>
           <span className="value highlight-salary">{job.salary}</span>
         </div>
-        
+
         <div className="info-grid">
-           <div className="info-row">
-             <i className="fa-solid fa-clock"></i>
-             <div className="info-content">
-               <span className="info-title">Thời gian làm việc</span>
-               <span className="info-value">{job.time}</span>
-             </div>
-           </div>
+          <div className="info-row">
+            <i className="fa-solid fa-clock"></i>
+            <div className="info-content">
+              <span className="info-title">Thời gian làm việc</span>
+              <span className="info-value">{job.time}</span>
+            </div>
+          </div>
 
-           <div className="info-row">
-             <i className="fa-solid fa-sack-dollar"></i>
-             <div className="info-content">
-               <span className="info-title">Tiền tăng ca</span>
-               <span className="info-value">{job.overtime}</span>
-             </div>
-           </div>
+          <div className="info-row">
+            <i className="fa-solid fa-sack-dollar"></i>
+            <div className="info-content">
+              <span className="info-title">Tiền tăng ca</span>
+              <span className="info-value">{job.overtime}</span>
+            </div>
+          </div>
 
-           <div className="info-row">
-             <i className="fa-solid fa-gift"></i>
-             <div className="info-content">
-               <span className="info-title">Chuyên cần</span>
-               <span className="info-value">{job.attendance_bonus}</span>
-             </div>
-           </div>
+          <div className="info-row">
+            <i className="fa-solid fa-gift"></i>
+            <div className="info-content">
+              <span className="info-title">Chuyên cần</span>
+              <span className="info-value">{job.attendance_bonus}</span>
+            </div>
+          </div>
 
-           <div className="info-row">
-             <i className="fa-solid fa-utensils"></i>
-             <div className="info-content">
-               <span className="info-title">Quyền lợi</span>
-               <span className="info-value">{job.benefits}</span>
-             </div>
-           </div>
+          <div className="info-row">
+            <i className="fa-solid fa-utensils"></i>
+            <div className="info-content">
+              <span className="info-title">Quyền lợi</span>
+              <span className="info-value">{job.benefits}</span>
+            </div>
+          </div>
         </div>
       </div>
-      
+
       <div className="job-extra-info">
         <div className="extra-item">
           <i className="fa-regular fa-id-card text-primary"></i>
           <span><strong>Hồ sơ:</strong> {job.requirements}</span>
-        </div>
-        <div className="extra-item">
-          <i className="fa-solid fa-circle-info text-primary"></i>
-          <span><strong>Mô tả:</strong> {job.description}</span>
         </div>
       </div>
 
@@ -98,8 +99,8 @@ function JobCard({ job }) {
             </a>
           </>
         ) : (
-          <div className="action-btn btn-disablet"> Tạm ngưng
-            <i className="fa-solid fa-ban"></i>  
+          <div className="action-btn btn-disabled"> Tạm ngưng
+            <i className="fa-solid fa-ban"></i>
           </div>
         )}
       </div>

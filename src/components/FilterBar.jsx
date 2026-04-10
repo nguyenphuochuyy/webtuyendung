@@ -4,6 +4,7 @@ import './FilterBar.css';
 function FilterBar({ 
   currentFilter, onFilterChange, 
   currentSalaryType, onSalaryTypeChange,
+  currentLocation, onLocationChange,
   currentSort, onSortChange,
   totalJobs 
 }) {
@@ -27,6 +28,17 @@ function FilterBar({
         ))}
       </div>
       <div className="filter-controls">
+        <select 
+          className="filter-select"
+          value={currentLocation} 
+          onChange={(e) => onLocationChange(e.target.value)}
+        >
+          <option value="all">Khu vực (Tất cả)</option>
+          <option value="KCN Tân Đức">KCN Tân Đức</option>
+          <option value="KCN Hải Sơn">KCN Hải Sơn</option>
+          <option value="KCN Tân Đô">KCN Tân Đô</option>
+        </select>
+
         <select 
           className="filter-select"
           value={currentSalaryType} 

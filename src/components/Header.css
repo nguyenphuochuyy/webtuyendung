@@ -29,7 +29,7 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .header {
     padding: 1rem 0;
     margin-bottom: 1.5rem;
